@@ -2,7 +2,7 @@ const { connect, connection, connections } = require("mongoose");
 const { URL } = require("./config");
 
 connect(URL, {
-    useFindAndModify: true,
+    useFindAndModify: false,
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
@@ -10,5 +10,8 @@ connect(URL, {
 
 connection.on("open", () => {
     const info = connections[0];
-    console.log(`Connected to ${info.host}: ${info.port}: ${info.name}`)
+    console.log(`Connected to:
+     host: ${info.host},
+     port: ${info.port},
+     name: ${info.name}`)
 });

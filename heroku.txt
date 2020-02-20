@@ -1,0 +1,9 @@
+in cmd
+
+1 start - heroku login
+2 heroku create,
+3 packagejson -> engine: {npm: "currently version", node: "currently version"}
+
+4 - created app in heroku (https://dashboard.heroku.com/apps) -> settings -> reveal config vars ->
+
+KEY = PROD_URL(process.env in server part); value = DEV_URL(mongodb url)
